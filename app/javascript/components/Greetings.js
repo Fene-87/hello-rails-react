@@ -12,7 +12,7 @@ const Greetings = () => {
   }, [dispatch])
   return (
     <div>
-        <h1>{greetings[0].message}</h1>
+        <h1>{greetings.message}</h1>
         <h2>Working</h2>
     </div>
   )
