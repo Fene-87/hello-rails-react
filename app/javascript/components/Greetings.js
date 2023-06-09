@@ -3,11 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchGreetings } from '../redux/features/greetings/greetingsSlice';
 
 const Greetings = () => {
-  const { greetings } = useSelector((store) => store.greetings)
+  const { greetings, status } = useSelector((store) => store.greetings)
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchGreetings());
+    console.log(status)
   }, [dispatch])
   return (
     <div>
